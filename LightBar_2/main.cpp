@@ -68,18 +68,6 @@ int main()
 		}
 		
 
-		// 绘制灯条边界框
-		for (const auto& bar : light_bars)
-		{
-			Point2f vertices[4];
-			bar.points(vertices);
-			for (int i = 0; i < 4; i++)
-			{
-				line(frame, vertices[i], vertices[(i + 1) % 4], Scalar(0, 255, 0), 2);
-			}
-		}
-
-
 		//甲板区域计算
 		if (light_bars.size() >= 2)
 		{
